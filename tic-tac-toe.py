@@ -5,14 +5,26 @@
 #The program should let the players take turns to input their moves. 
 #The program should report the outcome of the game.
 
+#make an array that holds the board values
+board = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-#Begin by drawing the playing board in the terminal window so the human player can see it
-print " 1 | 2 | 3 "
-print "-----------"
-print " 4 | 5 | 6 "
-print "-----------"
-print " 7 | 8 | 9 "
+moveNumber = 0
 
-print "Player X make your move"
+verticalBar = " | "
+horizontalBar = "-----------"
 
-#players make a move by selecting one of the numbered sections to enter their move
+def drawBoard( ):
+	#draw new board function
+	print board[0] + verticalBar + board[1] + verticalBar + board[2] 
+	print horizontalBar
+	print board[3] + verticalBar + board[4] + verticalBar + board[5] 
+	print horizontalBar
+	print board[6] + verticalBar + board[7] + verticalBar + board[8] 
+	return
+
+drawBoard( )
+
+print "Player X make your move, enter number 1 - 9 on the keyboard"
+
+
+
