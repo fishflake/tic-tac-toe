@@ -12,19 +12,39 @@ moveNumber = 0
 
 verticalBar = " | "
 horizontalBar = "-----------"
+spacing = " "
+
 
 def drawBoard( ):
 	#draw new board function
+	print moveNumber
+	print spacing 
 	print board[0] + verticalBar + board[1] + verticalBar + board[2] 
 	print horizontalBar
 	print board[3] + verticalBar + board[4] + verticalBar + board[5] 
 	print horizontalBar
 	print board[6] + verticalBar + board[7] + verticalBar + board[8] 
+	print spacing
 	return
 
-drawBoard( )
+def play():
+#	print "Player X make your move, enter number 1 - 9 on the keyboard"
+	move = input()
+	global moveNumber
+	if moveNumber % 2 == 0:
+	    board[move-1]= 'X' 
+	else:
+	    board[move-1]= 'O'
+	moveNumber += 1
+	drawBoard()
 
-print "Player X make your move, enter number 1 - 9 on the keyboard"
+drawBoard()
 
+while moveNumber < 9:
+	if moveNumber % 2 == 0:
+	    print "Player X make your move, enter number 1 - 9 on the keyboard"
+	else:
+	    print "Player O make your move, enter number 1 - 9 on the keyboard"
+	play()
 
 
