@@ -28,8 +28,9 @@ gameOver = False
 
 #draw new board function
 def drawBoard( ):
-	print moveNumber
-	print spacing 
+	print spacing
+	# print moveNumber
+	print spacing
 	print board[0] + verticalBar + board[1] + verticalBar + board[2] 
 	print horizontalBar
 	print board[3] + verticalBar + board[4] + verticalBar + board[5] 
@@ -41,6 +42,8 @@ def drawBoard( ):
 #A function to check if that space has already been used
 def CheckSpace( space ):
 	if board[space] == "X" or board[space] == "O":
+		print spacing
+		print spacing
 		print "Try another spot buddy, this one's taken"
 		return True
 
